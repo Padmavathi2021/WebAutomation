@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import managers.FileReaderManager;
 import testDataTypes.FaceBook;
-import testDataTypes.WalletHub;
 
 public class JsonDataReader {
 
