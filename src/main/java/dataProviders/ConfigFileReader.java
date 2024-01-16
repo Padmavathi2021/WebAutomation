@@ -48,8 +48,8 @@ public class ConfigFileReader {
 					"Application Url not specified in the Configuration.properties file for the Key:" + url);
 	}
 
-	public String getFaceBookUrl() {
-		String url = properties.getProperty("facebookUrl");
+	public String getFlowchartUrl() {
+		String url = properties.getProperty("flowChartUrl");
 		if (url != null)
 			return url;
 		else

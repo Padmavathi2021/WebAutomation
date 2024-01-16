@@ -118,4 +118,26 @@ public class BasePage {
 		Log.logInfo.info("Scroll to top of the element");
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
 	}
+
+	protected void dragAndDrop(WebElement source, WebElement destination) {
+		Actions action = new Actions(driver);
+		try {
+			action.dragAndDrop(source, destination).build().perform();
+			Log.logInfo.info("dragged and dropped");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			throw new RuntimeException("Unable to drag and drop");
+		}
+	}
+
+	protected void rightClick(WebElement element) {
+		Actions action = new Actions(driver);
+		try {
+			action.contextClick(element).build().perform();
+			Log.logInfo.info("dragged and dropped");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			throw new RuntimeException("Unable to drag and drop");
+		}
+	}
 }
